@@ -15,18 +15,33 @@ const people = [
 //   //onazoL
 //Lozano
 
-function nick(array) {
-  const nickName = array.map(function (value) {
+// rab i tam
+
+function nickName(array) {
+  const mappedName = array.map(function (value) {
     return value.firstName.substring(0, 3).split("").reverse().join("");
   });
-  console.log(nickName);
+  console.log("mapedName", mappedName);
+  const mappedSurname = array.map(function (value) {
+    return value.lastName.slice(-3).split("").reverse().join("");
+  });
+  console.log("mapedSurname", mappedSurname);
+  nameSurname = mappedName.join(mappedSurname);
+  return (result = nameSurname.toUpperCase());
 }
-nick(people);
+nickName(people);
+
+console.log(result);
 
 //   b) pobierze 3 ostatnie litery nazwiska, zamieni kolejnością pierwszą i ostatnią i dołączy powstały string do poprzedniego
+//    ona i azo
+
 //   c*) Zmieni wielkość liter w taki sposób, żeby powstały nick zaczynał się wielką literą i nie miał żadnych wielkich liter poza 1.
+
 //   d) Jeżeli liczba znaków w imieniu bądź nazwisku jest mniejsza niż 3, nickname będzie odpowiednio krótszy
+
 //   e) rozważcie wszystkie skrajne przypadki, ponieważ Waszą funkcję mapującą wrzucimy do testów na platformie
+
 //   e) Have fun :)
 //   Na przykład:
 //   Dla osoby:
